@@ -20,10 +20,11 @@ type HTTPServer struct {
 }
 
 func MustLoad() *Config { // must потому что функция паникует а не выбрасывает таймаут
-	configPath := os.Getenv("CONFIG_PATH")
-	if configPath == "" {
-		log.Fatal("CONFIG_PATH environment variable not set")
-	}
+	//configPath := os.Getenv("CONFIG_PATH")
+	//if configPath == "" {
+	//	log.Fatal("CONFIG_PATH environment variable not set")
+	//}
+	configPath := "./config/local.yaml"
 
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		log.Fatalf("CONFIG_PATH does not exist: %s", configPath)

@@ -2,13 +2,12 @@ package main
 
 import (
 	"fmt"
-	"url-shortner/internal/config"
+	"go-url-shortner/internal/config"
 )
 
 func main() {
 	cfg := config.MustLoad()
-	fmt.Printf("%+v\n", cfg)
-	fmt.Println(cfg)
+	fmt.Printf("CONIFG LOADED:\n%+v\n", cfg)
 
 	// TODO: init logger: slog
 
