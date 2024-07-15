@@ -14,6 +14,8 @@ import (
 )
 
 // дублирует метод из storage (описываем интерфейсы там где они используются)
+//
+//go:generate go run github.com/vektra/mockery/v2 --name=URLSaver
 type URLSaver interface {
 	Save(urlToSave string, alias string) (int64, error)
 }
